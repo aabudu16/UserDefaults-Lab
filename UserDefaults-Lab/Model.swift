@@ -9,8 +9,9 @@
 import Foundation
 
 struct Horoscope: Codable {
-    let sunsign: String
-    let credit: String
-    let date: String
-    let horoscope: String
+    let sunsign: String?
+    let credit: String?
+    let date: String?
+    let horoscope: String?
+    
 }

@@ -1,10 +1,3 @@
-//
-//  HoroscopeViewController.swift
-//  UserDefaults-Lab
-//
-//  Created by Mr Wonderful on 9/24/19.
-//  Copyright © 2019 Mr Wonderful. All rights reserved.
-//
 
 import UIKit
 
@@ -13,15 +6,37 @@ class HoroscopeViewController: UIViewController {
     @IBOutlet var horoscopeDate: UILabel!
     @IBOutlet var horsocopeDetail: UITextView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    var date:String!
+    var horoscope:Horoscope!{
+        didSet{
+        setupHoroscopeVC()
+        }
     }
     
-    func getData(){
-        HoroscopeAPIClient.shared.getData(horoscope: <#T##String#>, completionHandler: <#T##(Result<Horoscope, AppError>) -> ()#>)
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    getData()
+        
     }
- 
-
+    
+   private func getData(){
+        HoroscopeAPIClient.shared.getData(horoscope: "pisces") { (result) in
+            DispatchQueue.main.async {
+                switch result{
+                case .failure(let error):
+                    print(error)
+                case .success(let horoscope):
+                    self.horoscope = horoscope
+                }
+            }
+        }
+    }
+    
+   private func setupHoroscopeVC(){
+        horoscopeDate.text = horoscope.date
+        horoscopeSign.text = horoscope.sunsign
+        horsocopeDetail.text = horoscope.horoscope
+    }
+    
 }
+
