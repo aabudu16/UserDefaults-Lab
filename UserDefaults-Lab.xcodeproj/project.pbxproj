@@ -19,6 +19,7 @@
 		8532F192233AA006004C0B11 /* HoroscopeAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8532F191233AA006004C0B11 /* HoroscopeAPIClient.swift */; };
 		8532F194233AA0AF004C0B11 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8532F193233AA0AF004C0B11 /* Model.swift */; };
 		8532F196233AB0C3004C0B11 /* UserDefaultWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8532F195233AB0C3004C0B11 /* UserDefaultWrapper.swift */; };
+		8532F1D6233D362F004C0B11 /* HoroscopeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8532F1D5233D362F004C0B11 /* HoroscopeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		8532F191233AA006004C0B11 /* HoroscopeAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeAPIClient.swift; sourceTree = "<group>"; };
 		8532F193233AA0AF004C0B11 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		8532F195233AB0C3004C0B11 /* UserDefaultWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultWrapper.swift; sourceTree = "<group>"; };
+		8532F1D5233D362F004C0B11 /* HoroscopeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				8532F191233AA006004C0B11 /* HoroscopeAPIClient.swift */,
 				8532F193233AA0AF004C0B11 /* Model.swift */,
 				8532F195233AB0C3004C0B11 /* UserDefaultWrapper.swift */,
+				8532F1D5233D362F004C0B11 /* HoroscopeModel.swift */,
 			);
 			path = "UserDefaults-Lab";
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 			files = (
 				8532F196233AB0C3004C0B11 /* UserDefaultWrapper.swift in Sources */,
 				8532F194233AA0AF004C0B11 /* Model.swift in Sources */,
+				8532F1D6233D362F004C0B11 /* HoroscopeModel.swift in Sources */,
 				8532F18C233A9ECB004C0B11 /* APPErrors.swift in Sources */,
 				8532F16B233A9958004C0B11 /* DatePickerViewController.swift in Sources */,
 				8532F192233AA006004C0B11 /* HoroscopeAPIClient.swift in Sources */,

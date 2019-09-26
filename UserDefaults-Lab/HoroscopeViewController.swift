@@ -6,21 +6,21 @@ class HoroscopeViewController: UIViewController {
     @IBOutlet var horoscopeDate: UILabel!
     @IBOutlet var horsocopeDetail: UITextView!
     
-    var date:String!
+    var horoscopeSigns:String!
     var horoscope:Horoscope!{
         didSet{
-        setupHoroscopeVC()
+            setupHoroscopeVC()
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    getData()
+        getData()
         
     }
     
-   private func getData(){
-        HoroscopeAPIClient.shared.getData(horoscope: "pisces") { (result) in
+    private func getData(){
+        HoroscopeAPIClient.shared.getData(horoscope: horoscopeSigns.lowercased()) { (result) in
             DispatchQueue.main.async {
                 switch result{
                 case .failure(let error):
@@ -32,7 +32,7 @@ class HoroscopeViewController: UIViewController {
         }
     }
     
-   private func setupHoroscopeVC(){
+    private func setupHoroscopeVC(){
         horoscopeDate.text = horoscope.date
         horoscopeSign.text = horoscope.sunsign
         horsocopeDetail.text = horoscope.horoscope
